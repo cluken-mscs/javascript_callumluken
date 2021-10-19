@@ -1,10 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
     <title>Week 8</title>
     <meta charset="utf-8">
     <meta name="viewport" content="with=device-width, initial-scale=1">
     <script src="week8.js" defer></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.min.js" defer></script>
+    <script src="week8.js" defer></script>
+</head>
+
+<body>
+    <div id="week8" class="container">
+        <h1>Week 8 Forms</h1>
+        <form name="customForm" id="customFormID" action="https://littlelightmedia.com/test.php" method="post">
+
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Username (A valid email address)</label>
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="examplePassword1">Password</label>
+          <input type="password" name="password1" class="form-control" id="password1" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+          <label for="examplePassword2">Confirm Password</label>
+          <input type="password" name="password2" class="form-control" id="password2" placeholder="Password" required>
+        </div>
+        <!-- <div class="form-group">
+            <h4>Billing Address</h4>
+            <label for="inputAddress">Billing Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Shipping Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          </div> -->
+          <h3>Billing Address</h3>
+          <div class="form-row">
+              
+            <div class="col-md-6 mb-3">
+              <label for="addressCityBill">City</label>
+              <input type="text" name="billingCity" maxlength="40" class="form-control" id="addressCityBill" placeholder="City" required>
+              <div class="invalid-tooltip">
+                Please provide a valid city.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationTooltip04">State</label>
+              <input type="text" name="billingState" minlength="2" maxlength="2" class="form-control" id="addressStateBill" placeholder="State" required>
+              <div class="invalid-tooltip">
+                Please provide a valid state.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationTooltip05">Zip</label>
+              <input type="text" name="billingZip" minlength="5" maxlength="5" class="form-control" id="addressZipBill" placeholder="Zip" required>
+              <div class="invalid-tooltip">
+                Please provide a valid zip.
+              </div>
+            </div>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="addressCheck">
+            <label class="form-check-label" for="addressCheck">Use Shipping Address as Billing Address</label>
+          </div>
+          <h3>Shipping Address</h3>
+          
+          <div class="form-row">
+              
+            <div class="col-md-6 mb-3">
+              <label for="addressCityShip">City</label>
+              <input type="text" name="shippingCity" maxlength="40" class="form-control" id="addressCityShip" placeholder="City" required>
+              <div class="invalid-tooltip">
+                Please provide a valid city.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationTooltip04">State</label>
+              <input type="text" name="shippingState" minlength="2" maxlength="2" class="form-control" id="addressStateShip" placeholder="State" required>
+              <div class="invalid-tooltip">
+                Please provide a valid state.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationTooltip05">Zip</label>
+              <input type="text" name="shippingZip" minlength="5" maxlength="5" class="form-control" id="addressZipShip" placeholder="Zip" required>
+              <div class="invalid-tooltip">
+                Please provide a valid zip.
+              </div>
+            </div>
+          </div>
+              
+        <div class="form-row">
+            <div class="col-md-5 mb-3">
+                <label for="validationTooltip03">Phone</label>
+                <input type="text" name="phone" class="form-control" id="validationTooltip03" placeholder="Phone" required>
+                    <div class="invalid-tooltip">
+                        Please provide a valid city.
+                    </div>
+            </div>
+            <div class="col-md-7 mb-3">
+                <label for="validationTooltip04">Email</label>
+                <input type="email" class="form-control" id="email2" placeholder="Email" required>
+                    <div class="invalid-tooltip">
+                        Please provide a valid state.
+                    </div>
+            </div>
+        </div>
+
+            <h2>Additional Information</h2>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline1">Admin</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline2" name="customRadioInline2" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline2">Student</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline3">Faculty</label>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect2">Example multiple select</label>
+                        <select multiple class="form-control" id="skills">
+                            <option>.Net</option>
+                            <option>Java</option>
+                            <option>PHP</option>
+                            <option>Javascript</option>
+                            <option>SQL</option>
+                            <option>HTML/CSS</option>
+                            <option>C#</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="exampleFormControlSelect3">Years in School</label>
+                    <select class="custom-select" id="schoolYears">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="7">8</option>
+                        <option value="7">9</option>
+                    </select>
+                </div>
+            </div>
+            <h2>Credit Card Information</h2>
+            <div class="form-row">
+            <div class="col-md-9 mb-3">
+                <label for="cc">Credit Card</label>
+                <input type="text" name="cc" class="form-control" id="cc" placeholder="xxxx-xxxx-xxxx-xxxx" required pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$">
+                <div class="invalid-tooltip">
+                  Please provide a valid credit card.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="CVC">CVC</label>
+                <input type="text" name="CVC" class="form-control" id="CVC" placeholder="xxx" required>
+                <div class="invalid-tooltip">
+                  Please provide a CVC code.
+                </div></div>
+        </div>
+
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+            
+          </div>
+        
+
+
+
+
+        
+        
+      </form>
+    </div>
+</body>
 
 </html>
