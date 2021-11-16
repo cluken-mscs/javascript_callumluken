@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Week 11: State, Storage, Security</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <script src="../js/bootstrap.min.js?_&amp;d2lSessionVal=5R08At3uMNH5rnz7foktOYwFP" defer></script>
+        <script src="script.js?_&amp;d2lSessionVal=5R08At3uMNH5rnz7foktOYwFP" defer></script>
+        <link href="../css/bootstrap.min.css?_&amp;d2lSessionVal=5R08At3uMNH5rnz7foktOYwFP" rel="stylesheet">
+        <link href="styles.css?_&amp;d2lSessionVal=5R08At3uMNH5rnz7foktOYwFP" rel="stylesheet">
+    <script>function lti_launch( vars, target ) {
+						var query = '';
+						var new_tab = false;
+
+						for(var key in vars) {
+							if(query.length == 0) {
+								query += '?' + key + '=' + encodeURIComponent(vars[key]);
+							}
+							else {
+								query += '&' + key + '=' + encodeURIComponent(vars[key]);
+							}
+						}
+
+						var url = '/d2l/customization/pearsonlti/1704/Launch' + query;(target == '_blank') ? window.open( url, '_blank' ) : location.replace( url );}</script><script src="/d2l/im/d2lreader/D2LReader_v2.js?rsUrl=https%3a%2f%2fapp.readspeaker.com%2fcgi-bin%2frsent&amp;custId=10042&amp;lang=en_us&amp;voice=Kate&amp;listenText=Listen&amp;listenTitle=Listen+to+this+page&amp;v=20.21.10.32920"></script><script>
+				const allowDetach = true;
+
+				window.rsConf = {
+					general: { usePost: true },
+					ui: {
+						disableDetachment: !allowDetach,
+						playbackDetach: allowDetach,
+						tools: { detachment: allowDetach }
+					}
+				};
+			</script><script src="https://cdn1.readspeaker.com/script/10042/webReaderForEducation/brightspace/v3.4/webReader.js?pids=wr&amp;dload=BrightSpace&amp;v=20.21.10.32920"></script><script src="/d2l/common/math/MathML.js?v=20.21.10.32920"></script><script>document.addEventListener('DOMContentLoaded', function() { D2LMathML.DesktopInit('https://s.brightspace.com/lib/mathjax/2.7.4/MathJax.js?config=MML_HTMLorMML','https://s.brightspace.com/lib/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML%2cSafe','130',true); });</script><script src="/d2l/common/iframe/iframe-client.js?v=20.21.10.32920"></script><script>window.addEventListener('message', function(event) { 
+					if( !event.data ) {
+						return;
+					}
+
+					var params;
+					try {
+						params = JSON.parse( event.data );
+					}
+					catch {
+						return;
+					}
+					if( !params.subject || params.subject !== 'lti.frameResize' ) {
+						return;
+					}
+
+					const MAX_FRAME_HEIGHT = 10000
+					if( !params.height || params.height < 1 || params.height > MAX_FRAME_HEIGHT ) {
+						console.warn( 'Invalid height value received, aborting' );
+						return;
+					}
+					var el = document.getElementsByTagName( 'iframe' );
+					for ( var i=0; i < el.length; i++ ) {
+						if( el[i].contentWindow === event.source ) {
+							el[i].style.height = params.height + 'px';
+							el[i].style.width = '100%';
+							console.info( 'Setting iFrame height to ' + params.height );
+							console.info( 'Setting iFrame width to 100%' );
+						}
+					}
+				});</script></head>
+
+    <body>
+        
+        <!-- Container for Hard Coded HTML -->
+        <div id="content" class="container">
+            <h1>Drag, Drop, and Roll</h1>
+            <div id="draggableBoxes">
+                <div class="box"></div>
+                Click to duplicate on Tilty Table
+            </div>
+            <div id="tiltyTable">Tilty Table</div>
+        </div>
+
+    </body> 
+</html>
+
+
+
